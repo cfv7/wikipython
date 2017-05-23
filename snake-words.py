@@ -1,20 +1,22 @@
-import csv
 import requests
+from collections import Counter
 from bs4 import BeautifulSoup
 
-r = requests.get('http://lipsum.lipsum.com/feed/html')
-#q = requests.get('http://colin.red')
+def wordCount(text):
+  count = 0
+  for character in text:
+    if character == ' ' or character == '/t' or character == '/n':
+      count = count + 1
+  return count
 
+#def analyze(r):
+r = requests.get('https://en.wikipedia.org/wiki/Lionel_Messi')
 data = r.text
-
 soup = BeautifulSoup(data, "html.parser")
 
-
-#for link in soup.find_all('a'):
-#  print(link.get('href'))
-
 def main():
-  print(soup.prettify())
-  print(soup.find_all('a'))
-  #print(q.text)
+  print('analyze ->', Counter(soup.text.split()).most_common)
+  print('wordCount ->', wordCount(data))
+  #print(soup.text)
+  #print(soup.find_all('a'))
 main()

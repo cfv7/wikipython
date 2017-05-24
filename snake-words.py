@@ -10,9 +10,10 @@ def wordCount(text):
       count = count + 1
   return count
 
+article = 'Lionel_Messi'
 #stopWords = "the in a of to and his hers him he she her for as on"
 #def analyze(r):
-r = requests.get('https://en.wikipedia.org/w/index.php?title=Lionel_Messi&action=render')
+r = requests.get('https://en.wikipedia.org/w/index.php?title=%s&action=render'%article)
 data = r.text
 soup = BeautifulSoup(data, "html.parser")
 regExSoup = re.findall(r'[A-Za-z]{4,}', soup.text)

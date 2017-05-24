@@ -13,9 +13,11 @@ def wordCount(text):
       count = count + 1
   return count
 
+# user can search their own input easily by running python3 snake-words.py input (proper names are typically First_Last)
 article = 'Lionel_Messi'
 if len(sys.argv) > 1: article = sys.argv[1]
-r = requests.get('https://simple.wikipedia.org/w/index.php?title=%s&action=render'%article)
+# can use either en.wiki or simple.wiki which is shorter and contains more simple english
+r = requests.get('https://en.wikipedia.org/w/index.php?title=%s&action=render'%article)
 data = r.text
 soup = BeautifulSoup(data, "html.parser")
 # makes a simple word cloud 
@@ -26,11 +28,11 @@ regExSoup = re.findall(r'[A-Za-z]{4,}', soup.text)
 plt.imshow(wordcloud, interpolation='bilinear')
 plt.axis("off")
 
-# lower max_font_size
-wordcloud = WordCloud(max_font_size=40).generate(soup.text)
-plt.figure()
-plt.imshow(wordcloud, interpolation="bilinear")
-plt.axis("off")
+## lower max_font_size
+# wordcloud = WordCloud(max_font_size=40).generate(soup.text)
+# plt.figure()
+# plt.imshow(wordcloud, interpolation="bilinear")
+# plt.axis("off")
 plt.show()  
 
 

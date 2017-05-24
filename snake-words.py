@@ -1,3 +1,4 @@
+import sys
 import re
 import requests
 from collections import Counter
@@ -11,6 +12,7 @@ def wordCount(text):
   return count
 
 article = 'Lionel_Messi'
+if len(sys.argv) > 1: article = sys.argv[1]
 #stopWords = "the in a of to and his hers him he she her for as on"
 #def analyze(r):
 r = requests.get('https://en.wikipedia.org/w/index.php?title=%s&action=render'%article)
@@ -24,4 +26,4 @@ def main():
   print('wordCount ->', wordCount(data))
   #print(soup.text)
   #print(soup.find_all('a'))
-main()
+main(

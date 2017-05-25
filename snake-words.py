@@ -19,7 +19,7 @@ def wordCount(text):
 
 # user can search their own input easily by running 'python3 snake-words.py magic' 
 # proper names are typically case-sensitive First_Last
-article = 'Lionel_Messi'
+article = 'Python'
 if len(sys.argv) > 1: article = sys.argv[1]
 
 # can use either en.wiki or simple.wiki
@@ -53,9 +53,6 @@ wc.generate(soup.text)
 plt.imshow(wc, interpolation='bilinear')
 plt.axis("off")
 plt.show()
-
- 
-
 
 def main():
   print('analyze ->', Counter(regExSoup).most_common(10))

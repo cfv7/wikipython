@@ -1,0 +1,4 @@
+flask
+wordcloud
+bs4
+requests

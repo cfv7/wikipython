@@ -16,8 +16,7 @@ snake_mask = np.array(Image.open("snake.png"))
 stopwords = {"Retrieved", "html", "it", "the", "of", "a", "an", "for", "to", "in", "is", "through", "at", "which", "not", "was", "as", "by", "on", "may", "when", "and", "or", "with", "have"}
 
 @app.route("/")
-@app.route("/hello")
-def say_hi():
+def create():
   print(request.args)
   article = request.args.get("article")
   if article:
@@ -32,8 +31,7 @@ def say_hi():
     png = png.getvalue()
     # gives us an in-memory version of our conent
     # characters are rendering one set of bytes with a new set of bytes
-    # b64 -> +, /, l, U, 1
-    # convert b64 png into text via ascii
+    # b64 -> +, /, l, U, 1 ~ convert b64 png into text via ascii
     png = base64.b64encode(png).decode("ascii")
     html = """<img src="data:image/png;base64,%s" alt="word cloud">""" % png
   else:
@@ -44,6 +42,8 @@ def say_hi():
     width: 100%;
     height: 10%;
     background-color: lightgreen;
+    padding-left: 20px;
+    padding-top: 12px;
   }
 
   .main-container{
@@ -57,23 +57,6 @@ def say_hi():
   <p>if searching for a name use case-sensitive: First_Last</p>
   <form>Wiki article<input name=article><input type=submit></form>
   """ + html
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # last line of file
 if __name__ == "__main__":

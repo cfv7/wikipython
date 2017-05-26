@@ -28,7 +28,7 @@ data = r.text
 soup = BeautifulSoup(data, "html.parser")
 
 # stopwords, isn't currently working
-stopwords = {"Retrieved", "html", "it", "the", "of", "a", "an"}
+stopwords = {"Retrieved", "html", "it", "the", "of", "a", "an", "which", "than"}
 
 # # makes a simple word cloud 
 # wordcloud = WordCloud(stopwords=stopwords).generate(soup.text)
@@ -44,7 +44,7 @@ regExSoup = re.findall(r'[A-Za-z]{4,}', soup.text)
 snake_mask = np.array(Image.open("snake.png")) 
 
 # create cloud
-wc = WordCloud(max_words=2000, mask=snake_mask, stopwords=stopwords)
+wc = WordCloud(max_words=1000, mask=snake_mask, stopwords=stopwords)
 
 # generate word cloud
 wc.generate(soup.text)

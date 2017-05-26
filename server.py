@@ -51,7 +51,7 @@ def create():
   }
   </style> 
   <div class="header">
-  <h1>Snake Words</h1>
+  <h1>Wikipython</h1>
   </div>
   <p>this tool will generate a word cloud for any wikipedia article</p>
   <p>if searching for a name use case-sensitive: First_Last</p>

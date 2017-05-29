@@ -1,18 +1,15 @@
 from flask import Flask, request
-from os import environ
-from collections import Counter
 from bs4 import BeautifulSoup
 from wordcloud import WordCloud
 from PIL import Image
 import io
 import base64
-import re
 import requests
 import numpy as np
 
 
 app = Flask(__name__)
-snake_mask = np.array(Image.open("snake.png")) 
+snake_mask = np.array(Image.open("snake.png"))
 stopwords = {"Retrieved", "html", "it", "the", "of", "a", "an", "for", "to", "in", "is", "through", "at", "which", "not", "was", "as", "by", "on", "may", "when", "and", "or", "with", "have", "he", "his", "him", "http", "www", "com", "update", "last", "org", "htm", "https", "they", "are", "from", "also", "that", "then", "many", "this", "January", "February", "March", "April", "May", "June", "July", "August","September", "October","November", "December"}
 
 @app.route("/")
@@ -25,7 +22,7 @@ def create():
     soup = BeautifulSoup(data, "html.parser")
     wc = WordCloud(background_color='white', max_words=1000, mask=snake_mask, stopwords=stopwords).generate(soup.text)
     img = wc.to_image()
-    # give a file-like string of bytes for a given input 
+    # give a file-like string of bytes for a given input
     png = io.BytesIO()
     img.save(png, "PNG")
     png = png.getvalue()
@@ -35,7 +32,7 @@ def create():
     png = base64.b64encode(png).decode("ascii")
     html = """<img src="data:image/png;base64,%s" alt="word cloud">""" % png
   else:
-    html = ""    
+    html = ""   
   return """
   <style type="text/css">
   .header{

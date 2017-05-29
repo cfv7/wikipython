@@ -1,4 +1,6 @@
 # Wikipython
+[![PyPI](https://img.shields.io/pypi/pyversions/Django.svg)]()
+
 A python tool that scrapes any Wikipedia page and outputs most commonly used words in a wordcloud.
 
 ![sample output](https://github.com/cfv7/wikipython/blob/master/examples/sample.png)

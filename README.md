@@ -3,6 +3,9 @@
 ## Summary:
 Create a python tool that scrapes any given url and outputs the top five most popular words
 
+![Command Line Matplotlib Output](https://cfv7.github.com/wikipython/examples/snakewords-output.png)
+
+
 ## Technology:
 This tool uses Python's Requests & BeautifulSoup libraries
 

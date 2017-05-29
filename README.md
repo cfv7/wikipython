@@ -1,22 +1,35 @@
+<div align="center">
 # Wikipython
+</div>
 
 ## Summary:
-Create a python tool that scrapes any given url and outputs the top five most popular words
+A python tool that scrapes any Wikipedia page and outputs most commonly used words in a wordcloud.
 
 ![sample output](https://github.com/cfv7/wikipython/blob/master/examples/sample.png)
 
 
 ## Technology:
-This tool uses Python's Requests & BeautifulSoup libraries
+1. Framework: Flask
+2. Libraries: BeautifulSoup4(BS4), Requests
+3. Package: Wordcloud
+4. Server: Gunicorn
 
 ## Process:
-* get the text from a webpage
+* scrape text from a wiki page
 * parse the text into strings
-* put the strings into a container
-* use the Counter functionality to total up most common
+* use the Counter functionality to total up most commonly occuring strings
 * use regular expressions via python's re module
+* plug those words
 
 ## Future:
-* get it running in a flask framework so that it can be used client side
-* if not, just beef up it's command line utility
-* eventually I hope to work on a web spider and learn more about robot exclusion standard
+* eventually I hope to work on a web spider which could scrape every page of a whole website rather than just a wiki page
+* learn more about robot exclusion standard
+* make an optional toggle to output an <ol> of top words
+* toggle between wikipedias in different languagues (es.wiki or simple.wiki)
+
+## Getting Started
+```
+cd into your folder
+pip install -r requirements
+python3 wikipython.py
+```

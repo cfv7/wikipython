@@ -1,6 +1,4 @@
-<div align="center">
 # Wikipython
-</div>
 
 ## Summary:
 A python tool that scrapes any Wikipedia page and outputs most commonly used words in a wordcloud.
@@ -31,5 +29,6 @@ A python tool that scrapes any Wikipedia page and outputs most commonly used wor
 ```
 cd into your folder
 pip install -r requirements
-python3 wikipython.py
+<!--you can search any desired article by entering the title of your article (wikipedia.org/wiki/Lionel_Messi) immediately after the file name-->
+python3 wikipython.py Lionel_Messi
 ```

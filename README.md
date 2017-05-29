@@ -3,7 +3,7 @@
 ## Summary:
 Create a python tool that scrapes any given url and outputs the top five most popular words
 
-![sample output](https://cfv7.github.com/wikipython/examples/sample.png)
+![sample output](https://github.com/cfv7/wikipython/examples/sample.png)
 
 
 ## Technology:

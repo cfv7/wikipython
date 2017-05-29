@@ -1,6 +1,4 @@
 # Wikipython
-
-## Summary:
 A python tool that scrapes any Wikipedia page and outputs most commonly used words in a wordcloud.
 
 ![sample output](https://github.com/cfv7/wikipython/blob/master/examples/sample.png)
@@ -22,13 +20,22 @@ A python tool that scrapes any Wikipedia page and outputs most commonly used wor
 ## Future:
 * eventually I hope to work on a web spider which could scrape every page of a whole website rather than just a wiki page
 * learn more about robot exclusion standard
-* make an optional toggle to output an <ol> of top words
+* make an optional toggle to output an ordered list of top words
 * toggle between wikipedias in different languagues (es.wiki or simple.wiki)
 
-## Getting Started
+## Getting Started:
 ```
 cd into your folder
 pip install -r requirements
-<!--you can search any desired article by entering the title of your article (wikipedia.org/wiki/Lionel_Messi) immediately after the file name-->
+```
+for example: wikipedia.org/wiki/Lionel_Messi
+```
 python3 wikipython.py Lionel_Messi
 ```
+or 
+```
+python3 wikipython.py Water
+```
+
+Thanks for checking out my app. 🎈
+

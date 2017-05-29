@@ -23,12 +23,12 @@ article = 'Python'
 if len(sys.argv) > 1: article = sys.argv[1]
 
 # can use either en.wiki or simple.wiki
-r = requests.get('https://en.wikipedia.org/w/index.php?title=%s&action=render'%article)
+r = requests.get('https://simple.wikipedia.org/w/index.php?title=%s&action=render'%article)
 data = r.text
 soup = BeautifulSoup(data, "html.parser")
 
-# stopwords, isn't currently working
-stopwords = {"Retrieved", "html", "it", "the", "of", "a", "an", "which", "than"}
+# stopwords  
+stopwords = {"Retrieved", "html", "it", "the", "of", "a", "an", "for", "to", "in", "is", "through", "at", "which", "not", "was", "as", "by", "on", "may", "when", "and", "or", "with", "have", "he", "his", "him", "http", "www", "com"}
 
 # # makes a simple word cloud 
 # wordcloud = WordCloud(stopwords=stopwords).generate(soup.text)
@@ -44,7 +44,7 @@ regExSoup = re.findall(r'[A-Za-z]{4,}', soup.text)
 snake_mask = np.array(Image.open("snake.png")) 
 
 # create cloud
-wc = WordCloud(max_words=1000, mask=snake_mask, stopwords=stopwords)
+wc = WordCloud(background_color="white", max_words=4000, mask=snake_mask, stopwords=stopwords)
 
 # generate word cloud
 wc.generate(soup.text)

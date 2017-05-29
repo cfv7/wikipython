@@ -13,7 +13,7 @@ import numpy as np
 
 app = Flask(__name__)
 snake_mask = np.array(Image.open("snake.png")) 
-stopwords = {"Retrieved", "html", "it", "the", "of", "a", "an", "for", "to", "in", "is", "through", "at", "which", "not", "was", "as", "by", "on", "may", "when", "and", "or", "with", "have"}
+stopwords = {"Retrieved", "html", "it", "the", "of", "a", "an", "for", "to", "in", "is", "through", "at", "which", "not", "was", "as", "by", "on", "may", "when", "and", "or", "with", "have", "he", "his", "him", "http", "www", "com", "update", "last", "org", "htm", "https", "they", "are", "from", "also", "that", "then", "many", "this", "January", "February", "March", "April", "May", "June", "July", "August","September", "October","November", "December"}
 
 @app.route("/")
 def create():
@@ -23,7 +23,7 @@ def create():
     r = requests.get('https://en.wikipedia.org/w/index.php?title=%s&action=render'%article)
     data = r.text
     soup = BeautifulSoup(data, "html.parser")
-    wc = WordCloud(background_color='white', max_words=4000, mask=snake_mask, stopwords=stopwords).generate(soup.text)
+    wc = WordCloud(background_color='white', max_words=1000, mask=snake_mask, stopwords=stopwords).generate(soup.text)
     img = wc.to_image()
     # give a file-like string of bytes for a given input 
     png = io.BytesIO()

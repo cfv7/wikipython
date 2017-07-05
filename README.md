@@ -11,8 +11,6 @@ A python tool that scrapes any Wikipedia page and outputs most commonly used wor
 3. Package: Wordcloud
 4. Server: Gunicorn
 
-
-
 ## Process:
 * scrape text from a wiki page
 * parse the text into strings
@@ -31,14 +29,15 @@ A python tool that scrapes any Wikipedia page and outputs most commonly used wor
 cd into your folder
 pip install -r requirements
 ```
-for example: generate an image from wikipedia.org/wiki/Lionel_Messi
+generate an image, for example: wikipedia.org/wiki/Lionel_Messi
 ```
 python3 wikipython.py Lionel_Messi
 ```
-or spin up a server
+or spin up a server 
 ```
 python3 server.py 
 ```
+once you've done this the Flask server can be accessed in your browser at 127.0.0.1:5000
 
 Thanks for checking out my app. 
 

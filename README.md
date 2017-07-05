@@ -12,7 +12,6 @@ A python tool that scrapes any Wikipedia page and outputs most commonly used wor
 3. Package: Wordcloud
 4. Server: Gunicorn
 
-![python gif](https://github.com/cfv7/wikipython/blob/master/examples/wiki_python.gif)
 ![ozil gif](https://github.com/cfv7/wikipython/blob/master/examples/wiki_ozil.gif)
 
 

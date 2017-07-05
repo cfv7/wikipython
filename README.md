@@ -18,12 +18,6 @@ A python tool that scrapes any Wikipedia page and outputs most commonly used wor
 * use regular expressions via python's re module
 * plug those words
 
-## Future:
-* eventually I hope to work on a web spider which could scrape every page of a whole website rather than just a wiki page
-* learn more about robot exclusion standard
-* make an optional toggle to output an ordered list of top words
-* toggle between wikipedias in different languagues (es.wiki or simple.wiki)
-
 ## Getting Started:
 ```
 cd into your folder
@@ -37,7 +31,13 @@ or spin up a server
 ```
 python3 server.py 
 ```
-once you've done this the Flask server can be accessed in your browser at 127.0.0.1:5000
+enter 127.0.0.1:5000 into your browser 
+
+## Future:
+* eventually I hope to work on a web spider which could scrape every page of a whole website rather than just a wiki page
+* learn more about robot exclusion standard
+* make an optional toggle to output an ordered list of top words
+* toggle between wikipedias in different languagues (es.wiki or simple.wiki)
 
 Thanks for checking out my app. 
 

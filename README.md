@@ -3,8 +3,7 @@
 
 A python tool that scrapes any Wikipedia page and outputs most commonly used words in a wordcloud.
 
-![sample output](https://github.com/cfv7/wikipython/blob/master/examples/sample.png)
-
+![ozil gif](https://github.com/cfv7/wikipython/blob/master/examples/wiki_ozil.gif)
 
 ## Technology:
 1. Framework: Flask
@@ -12,7 +11,6 @@ A python tool that scrapes any Wikipedia page and outputs most commonly used wor
 3. Package: Wordcloud
 4. Server: Gunicorn
 
-![ozil gif](https://github.com/cfv7/wikipython/blob/master/examples/wiki_ozil.gif)
 
 
 ## Process:

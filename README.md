@@ -12,6 +12,10 @@ A python tool that scrapes any Wikipedia page and outputs most commonly used wor
 3. Package: Wordcloud
 4. Server: Gunicorn
 
+![python gif](https://github.com/cfv7/wikipython/blob/master/examples/wiki_python.gif)
+![ozil gif](https://github.com/cfv7/wikipython/blob/master/examples/wiki_ozil.gif)
+
+
 ## Process:
 * scrape text from a wiki page
 * parse the text into strings
@@ -30,14 +34,14 @@ A python tool that scrapes any Wikipedia page and outputs most commonly used wor
 cd into your folder
 pip install -r requirements
 ```
-for example: wikipedia.org/wiki/Lionel_Messi
+for example: generate an image from wikipedia.org/wiki/Lionel_Messi
 ```
 python3 wikipython.py Lionel_Messi
 ```
-or 
+or spin up a server
 ```
-python3 wikipython.py Water
+python3 server.py 
 ```
 
-Thanks for checking out my app. 🎈
+Thanks for checking out my app. 
 

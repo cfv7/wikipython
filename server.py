@@ -26,7 +26,7 @@ def create():
     png = io.BytesIO()
     img.save(png, "PNG")
     png = png.getvalue()
-    # gives us an in-memory version of our conent
+    # gives us an in-memory version of our content
     # characters are rendering one set of bytes with a new set of bytes
     # b64 -> +, /, l, U, 1 ~ convert b64 png into text via ascii
     png = base64.b64encode(png).decode("ascii")
@@ -35,24 +35,29 @@ def create():
     html = ""   
   return """
   <style type="text/css">
+  body{
+    margin: 0;
+    text-align: center;
+  }
   .header{
     width: 100%;
     height: 10%;
     background-color: lightgreen;
     padding-left: 20px;
-    padding-top: 12px;
+    padding-top: 3px;
+    text-align: center
   }
-
   .main-container{
     margin-right: 10%;
+    text-align: center
   }
   </style> 
   <div class="header">
   <h1>Wikipython</h1>
   </div>
-  <p>this tool will generate a word cloud for any wikipedia article</p>
-  <p>if searching for a name use case-sensitive: First_Last</p>
-  <form>Wiki article<input name=article><input type=submit></form>
+  <p>This tool will generate a word cloud for any wikipedia article.</p>
+  <p>If searching for a name use case-sensitive: First_Last.</p>
+  <form>Wiki article input:<input name=article><input type=submit></form>
   """ + html
 
 # last line of file
